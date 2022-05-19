@@ -20,15 +20,20 @@ public class MyApp {
         Questions[] questions = {new Questions(firstQuestion, "c"),
         new Questions(secondQuestion, "a"), new Questions(thirdQuestion, "c"),
         new Questions(fourthQuestion, "b"), new Questions(fifthQuestion, "a")};
+	    //call the method
         takeTest(questions);
 
     }
+	//create a method takeTest
     public static void takeTest(Questions[] questions){
         int score = 0;
+	    //loop through questions
         for(int i = 0; i < questions.length; i++){
             System.out.println(questions[i].prompt);
+		//let the user enter his answer userAnswer
             Scanner input = new Scanner(System.in);
             String userAnswer = input.nextLine();
+		//check if answer is true and if it is, increase variable score
             if(userAnswer.equals(questions[i].answer)){
                 score++;
             }
